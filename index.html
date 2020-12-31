@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap.css">
-    
+    <link rel="stylesheet" href="css.css">
+
     <title>GPA Calculator</title>
     
 </head>
-<body>
-    <div class="container ">
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+    <p id="p1">Your Trusted GPA Calculator... &#128540; &#128513; &#128516;</p>
+
+    <div class="container" style="display:none;" id="myDiv" class="animate-bottom">
         <div class="row ">
          <div class="col-md-5 offset-md-3 ">
             <h1 class="display-4 text-center mb-5">SK GPA Calculator</h1><i class="fa fas-calculator"></i>
@@ -22,7 +27,7 @@
                 <button class="btn btn-success" type = 'submit' id="button1">Proceed</button>
             </div>
         
-            </form>
+        </form>
            <div class="container courseDetails mb-4"><h2>Course Details:</h2>
             <form class="form">
                 <div class="form-group">
@@ -38,16 +43,16 @@
 
 
             <div id="output">
-            <h4>Your Total GPA is:</h4><div class="mt-4" id="text4"></div>
+            <h4 id="result">Your Total GPA is:</h4><div class="mt-4" id="text4"></div>
 
-            <h4>Your result is:</h4><div id="text5"></div>
+            <h4 id="result1">Your result is:</h4><div id="text5"></div>
         </div>
 
         <footer>
             <div>
                 <div copyright>
                     <p style="text-align: center; margin-top: 10%;"><small>&copy; 2020 All Rights Reserved. 
-                    Designed by <a href="Sammiekei40.github.io" target="">Codex_Sco</a></small></p>
+                    Designed by <a href="https://github.com/SammieKei40" target="">Codex_Sco</a></small></p>
                 </div>
             </div>
         </footer>
