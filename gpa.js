@@ -11,6 +11,8 @@ start = 0;
 total_unit = 0;
 total_grade_by_unit = 0;
 
+document.getElementById('output').style.visibility = 'hidden';
+
 
 numberForm.addEventListener('submit', (e)=>{
     e.preventDefault() //This would prevent the default behavior of form submission
@@ -90,12 +92,11 @@ button2.addEventListener('click', function (){
                     {grade = "F";}
 
                 
-                document.getElementById('text4').innerHTML = Math.round(sgpa, 2);
-               console.log(sgpa);
-                   console.log(grade); 
-               
-               document.getElementById('text5').innerHTML = grade
+                    
 
+                document.getElementById('text4').innerHTML = Math.round(sgpa, 2);        
+               document.getElementById('text5').innerHTML = grade
+               document.getElementById('output').style.visibility = 'visible';
 });
 
 button3.addEventListener('click', function(){
@@ -103,4 +104,18 @@ button3.addEventListener('click', function(){
     location.reload();
 
 })
-   
+
+
+
+// Loader
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 4000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("p1").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
