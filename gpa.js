@@ -94,7 +94,7 @@ button2.addEventListener('click', function (){
                 
                     
 
-                document.getElementById('text4').innerHTML = Math.round(sgpa, 2);        
+                document.getElementById('text4').innerHTML = sgpa;        
                document.getElementById('text5').innerHTML = grade
                document.getElementById('output').style.visibility = 'visible';
 });
